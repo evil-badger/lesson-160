@@ -1,0 +1,51 @@
+<!DOCTYPE html> <html> <head> <style type="text/css"> </style> </head>
+
+<body>
+        Дан инпут. По получению фокуса этим инпутом запишите в него число 1, а по потери фокуса - число 2.<br>
+        Для обращения у инпуту внутри функции-обработчика используйте объект this.<br><br>
+        <input id='elem', value="text";>
+        <br>
+        Дана кнопка, значением которой служит число 1. 
+        <br>Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу.<br><br>
+        <input id="button" type="submit" value="1">
+        <br><br>
+        Даны 5 абзацев с какими-то текстами. По клику на любой абзац запишите в конец его текста восклицательный знак.
+        <br>
+        <p id="elem1">text</p>
+        <p id="elem2">text</p>
+        <p id="elem3">text</p>
+        <p id="elem4">text</p>
+        <p id="elem5">text</p>
+        <br>
+        Даны 3 инпута, в которых записаны какие-то числа.<br> 
+        Поcле потери фокуса в любом из инпутов возведите стоящее в нем число в квадрат.<br>
+
+</body>
+
+<script>
+                let elem = document.querySelector('#elem');
+                elem.addEventListener('focus', function() { this.value = '1'; });
+                elem.addEventListener('blur', function() { this.value = '2'; });
+
+                let button = document.querySelector('#button');
+                button.addEventListener('click', function() { this.value=parseInt(this.value)+1; });
+                let elem1 = document.querySelector('#elem1');
+                let elem2 = document.querySelector('#elem2');
+                let elem3 = document.querySelector('#elem3');
+                let elem4 = document.querySelector('#elem4');
+                let elem5 = document.querySelector('#elem5');
+                elem1.addEventListener('click', func);
+                elem2.addEventListener('click', func);
+                elem3.addEventListener('click', func);
+                elem4.addEventListener('click', func);
+                elem5.addEventListener('click', func);
+
+                function func() {this.innerHTML+='!';}
+</script>
+
+</html>
+
+
+
+
+
