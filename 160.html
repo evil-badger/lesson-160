@@ -19,7 +19,9 @@
         <br>
         Даны 3 инпута, в которых записаны какие-то числа.<br> 
         Поcле потери фокуса в любом из инпутов возведите стоящее в нем число в квадрат.<br>
-
+        <input id='elem21', value="10";>
+        <input id='elem22', value="20";>
+        <input id='elem23', value="30";>
 </body>
 
 <script>
@@ -34,13 +36,23 @@
                 let elem3 = document.querySelector('#elem3');
                 let elem4 = document.querySelector('#elem4');
                 let elem5 = document.querySelector('#elem5');
-                elem1.addEventListener('click', func);
-                elem2.addEventListener('click', func);
-                elem3.addEventListener('click', func);
-                elem4.addEventListener('click', func);
-                elem5.addEventListener('click', func);
+                elem1.addEventListener('click', func1);
+                elem2.addEventListener('click', func1);
+                elem3.addEventListener('click', func1);
+                elem4.addEventListener('click', func1);
+                elem5.addEventListener('click', func1);
 
-                function func() {this.innerHTML+='!';}
+                function func1() {this.innerHTML+='!';}
+
+                let elem21 = document.querySelector('#elem21');
+                let elem22 = document.querySelector('#elem22');
+                let elem23 = document.querySelector('#elem23');
+                elem21.addEventListener('blur', func2);
+                elem22.addEventListener('blur', func2);
+                elem23.addEventListener('blur', func2);
+
+                function func2() {this.value=parseInt(this.value)*this.value;}
+
 </script>
 
 </html>
